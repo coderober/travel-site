@@ -908,6 +908,7 @@ a {
 
 .section-title--less-margin {
     margin-bottom: 1.3rem;
+    margin-top: 0;
   }
 
 .section-title__icon {
@@ -1390,7 +1391,28 @@ insted edit gulp/templates/sprite */
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
+
+.modal--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+.modal__inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 
 .modal__description {
     text-align: center;
